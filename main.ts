@@ -215,8 +215,8 @@ for (let h = 1; h <= HORIZON; h++) {
 
 // Sticky prior with sharpening: the scored reads arrive hourly, so blend each game's averaged
 // distribution back toward its current place and concentrate it on the peaks.
-const STICKY = Number(process.env.ROBLOX_STICKY ?? 0.3);
-const GAMMA = Number(process.env.ROBLOX_GAMMA ?? 1.7);
+const STICKY = Number(process.env.ROBLOX_STICKY ?? 0.2);
+const GAMMA = Number(process.env.ROBLOX_GAMMA ?? 1.4);
 for (const [id, a] of gameAcc) {
   const myPlace = lastChart.indexOf(id);
   if (myPlace === -1) continue;
